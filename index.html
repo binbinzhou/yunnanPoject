@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+
+<head>
+  <meta charset="UTF-8">
+  <title>云南运维首页</title>
+  <link rel="stylesheet" href="fonts/iconfont.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="out-wrap">
+    <!-- 标题 -->
+    <div class="header clearfix">
+      <h1 class="head-title">LOGO</h1>
+      <div class="head-search">
+        <i class="iconfont icon-sousuofangdajing"></i>
+        <input type="text" name="search" placeholder="请输入搜索内容">
+      </div>
+    </div>
+    <!-- 下半部分内容 -->
+    <div class="inner-wrap clearfix">
+      <!-- 左侧小半部分内容 -->
+      <div class="inner-left">
+        <div class="user clearfix">
+          <div class="user-pic">
+            <img src="img/pic.png" alt="picture">
+          </div>
+          <div class="user-info">
+            <p class="user-name">蕾哈娜</p>
+            <p class="user-tel">13111113333</p>
+            <i class="iconfont icon-yousanjiao"></i>
+          </div>
+        </div>
+        <!-- 个人设置、值班管理、共享文档 -->
+        <ul class="manage clearfix">
+          <li>
+            <img src="img/Settings.png" alt="Settings">
+            <!-- <p class="bgicon setting"></p> -->
+            <p>个人设置</p>
+          </li>
+          <li class="second-li">
+            <img src="img/Notebook.png" alt="Settings">
+            <p>值班管理</p>
+          </li>
+          <li>
+            <img src="img/Folder.png" alt="Settings">
+            <p>共享文档</p>
+          </li>
+        </ul>
+        <!-- 左侧导航 -->
+        <ul class="left-menu">
+          <li>
+            <a class="menu-item active" href="javascript:void(0);">
+              <i class="iconfont icon-shouyeshouye"></i>接口<i class="icon-change iconfont icon-yousanjiao"></i>
+            </a>
+            <!-- 左侧导航中的子菜单 -->
+            <ul class="sub-menu display-block">
+              <li data-val="0" target="pages/000.html">接口汇总</li>
+              <li data-val="1" target="pages/111.html">及时性监控</li>
+              <li data-val="2" target="pages/222.html">准确性监控</li>
+              <li data-val="3" target="pages/333.html">跨度接口横向监控</li>
+            </ul>
+          </li>
+          <li>
+            <a class="menu-item" href="javascript:void(0);">
+              <i class="iconfont icon-shouyeshouye"></i>调度<i class="icon-change iconfont icon-yousanjiao"></i>
+            </a>
+            <ul class="sub-menu">
+              <li data-val="4" target="pages/444.html">interface</li>
+              <li data-val="5" target="pages/555.html">monitor</li>
+            </ul>
+          </li>
+          <li>
+            <a class="menu-item" href="javascript:void(0);">
+              <i class="iconfont icon-shouyeshouye"></i>主机与数据库<i class="icon-change iconfont icon-yousanjiao"></i>
+            </a>
+            <ul class="sub-menu">
+              <li data-val="6" target="pages/666.html">rightNow</li>
+              <li data-val="7" target="pages/777.html">absolute</li>
+            </ul>
+          </li>
+          <li>
+            <a class="menu-item" href="javascript:void(0);">
+              <i class="iconfont icon-shouyeshouye"></i>一经MIS<i class="icon-change iconfont icon-yousanjiao"></i>
+            </a>
+            <ul class="sub-menu">
+              <li data-val="8" target="pages/888.html">888888</li>
+              <li data-val="9" target="pages/999.html">999999</li>
+            </ul>
+          </li>
+          <li>
+            <a class="menu-item" href="javascript:void(0);">
+              <i class="iconfont icon-shouyeshouye"></i>申告<i class="icon-change iconfont icon-yousanjiao"></i>
+            </a>
+            <ul class="sub-menu">
+              <li data-val="10">101010</li>
+              <li data-val="11">111111</li>
+              <li data-val="12">121212</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- 右侧内容区域展示 -->
+      <div class="inner-right">
+        <!-- 上方tab栏 -->
+        <ul class="right-menu clearfix">
+        </ul>
+        <div class="right-con">
+          <ul class="page-tabs clearfix">
+            <li class="tab-first">
+              <i class="iconfont icon-shouyeshouye"></i>
+              <span>首页</span>
+              <span class="tab-split">/</span>
+            </li>
+            <li>
+              <span>xxx页面</span>
+              <span class="tab-split">/</span>
+            </li>
+            <li>
+              <span>xxx</span>
+            </li>
+          </ul>
+          <!-- 调度更新汇总 -->
+          <div class="dispatch-update">
+            <div class="inner-title clearfix">
+              <p>调度更新汇总</p>
+              <div class="title-right">
+                <div id="w-date-dispatch"></div>
+              </div>
+            </div>
+            <div class="dispatch-wrap clearfix">
+              <div class="all-counts">
+                <h3>0</h3>
+                <h4>1997-01-01</h4>
+                <h5>运行总数</h5>
+              </div>
+              <ul class="cards-wrap">
+                <li class="js-success">
+                  <div class="cards">
+                    <p class="cards-name">运行成功</p>
+                    <h6 class="cards-num">0</h6>
+                    <i class="echarts-icon iconfont icon-zititubiao-68"></i>
+                    <div class="pie-echarts" id="w-success-pie"></div>
+                  </div>
+                </li>
+                <li class="js-running">
+                  <div class="cards">
+                    <p class="cards-name">正在运行</p>
+                    <h6 class="cards-num">0</h6>
+                    <i class="echarts-icon iconfont icon-jiazai"></i>
+                    <div class="pie-echarts" id="w-running-pie"></div>
+                  </div>
+                </li>
+                <li class="js-prepare">
+                  <div class="cards">
+                    <p class="cards-name">准备运行</p>
+                    <h6 class="cards-num">0</h6>
+                    <i class="echarts-icon iconfont icon-shalou2"></i>
+                    <div class="pie-echarts" id="w-prepare-pie"></div>
+                  </div>
+                </li>
+                <li class="js-hangUp">
+                  <div class="cards">
+                    <p class="cards-name">挂起数</p>
+                    <h6 class="cards-num">0</h6>
+                    <i class="echarts-icon iconfont icon-wenhao"></i>
+                    <div class="pie-echarts" id="w-hangUp-pie"></div>
+                  </div>
+                </li>
+                <li class="js-notRun">
+                  <div class="cards">
+                    <p class="cards-name">未运行</p>
+                    <h6 class="cards-num">0</h6>
+                    <i class="echarts-icon iconfont icon-times"></i>
+                    <div class="pie-echarts" id="w-notRun-pie"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 我的任务 -->
+          <div class="my-task">
+            <div class="inner-title clearfix">
+              <p>我的任务</p>
+              <div class="title-right">
+                <i class="iconfont icon-jiahao"></i><i class="iconfont icon-icon02"></i>
+              </div>
+            </div>
+            <!-- 表格部分 -->
+            <div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>任务名称</th>
+                    <th>归属</th>
+                    <th>更新时间</th>
+                    <th>状态</th>
+                  </tr>
+                </thead>
+                <tbody id="w-tbody">
+                </tbody>
+              </table>
+            </div>
+            <div class="table-bottom">
+              <div class="page">
+                <ul class="page-number clearfix">
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 汇总更新卡片 -->
+          <div class="summary">
+            <ul class="summary-ul clearfix">
+              <li class="sum-item">
+                <div class="inner-title clearfix">
+                  <p>前台报表更新汇总</p>
+                  <div class="title-right">
+                    <div id="w-date-report"></div>
+                  </div>
+                </div>
+                <div class="cards js-report">
+                  <p class="cards-time"><i class="iconfont icon-times"></i>13:24</p>
+                  <p class="cards-name">更新总数</p>
+                  <h6 class="cards-num">0</h6>
+                  <div class="echarts-wrap">
+                    <span class="percent">0%</span>
+                    <div class="sum-echarts" id="w-report-pie"></div>
+                  </div>
+                  <div class="report-info clearfix">
+                    <div>
+                      <img src="img/Group8.png" alt="">
+                      <div class="report-name">
+                        <p class="rep-name">已更新数</p>
+                        <p class="rep-counts js-update-counts">0</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img src="img/Group7.png" alt="">
+                      <div class="report-name">
+                        <p class="rep-name">未更新数</p>
+                        <p class="rep-counts js-notupdate-counts">0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="sum-item">
+                <div class="inner-title clearfix">
+                  <p>客户标签库更新汇总</p>
+                  <div class="title-right">
+                    <div id="w-date-tagboard"></div>
+                  </div>
+                </div>
+                <div class="cards js-tagboard">
+                  <p class="cards-name">更新总数</p>
+                  <h6 class="cards-num">0</h6>
+                  <div class="sum-echarts progress" id="w-tagboard-bar">
+                    <div class="progress-wrap pro-one">
+                      <p class="pro-update"></p>
+                      <span class="pro-count">0%</span>
+                    </div>
+                    <div class="progress-wrap pro-two">
+                      <p class="pro-notupdate"></p>
+                      <span class="pro-count">0%</span>
+                    </div>
+                  </div>
+                  <div class="report-info clearfix">
+                    <div>
+                      <img src="img/Group8.png" alt="">
+                      <div class="report-name">
+                        <p class="rep-name">已更新数</p>
+                        <p class="rep-counts js-update-counts">0</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img src="img/Group9.png" alt="">
+                      <div class="report-name">
+                        <p class="rep-name">未更新数</p>
+                        <p class="rep-counts js-notupdate-counts">0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="sum-item">
+                <div class="inner-title clearfix">
+                  <p>集市更新汇总</p>
+                  <div class="title-right">
+                    <div id="w-date-market"></div>
+                  </div>
+                </div>
+                <div class="cards js-market">
+                  <p class="cards-name">更新总数</p>
+                  <h6 class="cards-num">0</h6>
+                  <div class="echarts-wrap">
+                    <div class="lines firstline">
+                      <p class="line-item"></p>
+                      <span class="count">0%</span>
+                      <span class="circle"></span>
+                    </div>
+                    <div class="lines secondline">
+                      <p class="line-item"></p>
+                      <span class="count">0%</span>
+                      <span class="circle"></span>
+                    </div>
+                    <div class="sum-echarts" id="w-market-pie"></div>
+                  </div>
+                  <div class="report-info clearfix">
+                    <div>
+                      <img src="img/Group8.png" alt="">
+                      <div class="report-name">
+                        <p class="rep-name">已更新数</p>
+                        <p class="rep-counts js-update-counts">0</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img src="img/Group9.png" alt="">
+                      <div class="report-name">
+                        <p class="rep-name">未更新数</p>
+                        <p class="rep-counts js-notupdate-counts">0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="sum-item">
+                <div class="inner-title clearfix">
+                  <p>智慧眼更新汇总</p>
+                  <div class="title-right">
+                    <div id="w-date-smarteye"></div>
+                  </div>
+                </div>
+                <div class="cards js-smarteye">
+                  <p class="cards-name">更新总数</p>
+                  <h6 class="cards-num">0</h6>
+                  <div class="sum-echarts" id="w-smarteye-bar"></div>
+                  <div class="report-info clearfix">
+                    <div>
+                      <img src="img/Group8.png" alt="">
+                      <div class="report-name">
+                        <p class="rep-name">已更新数</p>
+                        <p class="rep-counts js-update-counts">0</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img src="img/Group9.png" alt="">
+                      <div class="report-name">
+                        <p class="rep-name">未更新数</p>
+                        <p class="rep-counts js-notupdate-counts">0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/select.js"></script>
+  <script src="js/turnpage.js"></script>
+  <script src="js/index.js"></script>
+  <!--[if IE 8]>
+    <script type="text/javascript" src="js/PIE.js"></script>
+    <script src="js/suitableIE.js"></script>
+    <![endif]-->
+  <script src="js/echarts.js"></script>
+  <script src="js/echartsConfig.js"></script>
+</body>
+
+</html>
